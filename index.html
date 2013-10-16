@@ -38,9 +38,9 @@ function loginclick()
   var hospid=document.getElementById("hospid").value;
   var userid=document.getElementById("userid").value;
   var password=document.getElementById("password").value;
-  
+alert(hospid+","+userid+","+password);
   $.getJSON("http://www.painstet.bqproject.com/login.php?jsoncallback=?&hospid="+hospid+"&userid="+userid+"&password="+password, function(data){   
-
+alert("insidejson");
 if(data['err']==1)
 {
 	alert("Error");
