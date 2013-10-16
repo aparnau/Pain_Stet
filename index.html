@@ -27,10 +27,9 @@ $(document).ready(function() {
 					}
 				}
 			});
-
 });
-$(function(){
-		$('#login').live("click",function(){
+function loginclick()
+{
 		$("#loginform").validate().element("#hospid");
 		$("#loginform").validate().element("#userid");
  		$("#loginform").validate().element("#password");
@@ -55,9 +54,8 @@ else
 window.location = 'patientmgmt.html?&hospid='+hosp_id+'&hospital_name='+hosp_name+'&country='+count+'&city='+city_name;
 }
   });
-  
-		});
-});
+  }
+
 </script>
 </head>
 <body>
@@ -85,7 +83,7 @@ window.location = 'patientmgmt.html?&hospid='+hosp_id+'&hospital_name='+hosp_nam
         </div>
         <div class="loginbtn">
           <!--<input type="button" value="Login" id="login"/>-->
-       <div class="ui-block-a"><a data-role="button" rel="external" id="login"><img src="images/loginbtn.png" width="342" height="45"/> </a></div>
+       <div class="ui-block-a"><a href="#" data-role="button" rel="external" id="login" onClick="loginclick();"><img src="images/loginbtn.png" width="342" height="45"/> </a></div>
         </div>
       </form>
     </div>
