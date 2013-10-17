@@ -10,7 +10,7 @@
 <script src="js/jquery-1.9.1.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/jquery-1.7.1.min.js"></script>
-<script src="js/jquery.mobile-1.3.0.min.js"></script>
+<script src="js/jquery.mobile-1.1.0.min.js"></script>
 <script src="js/jquery.validate.js"></script>
 <script>
 $(document).ready(function() {	
@@ -39,7 +39,8 @@ function loginclick()
   var userid=document.getElementById("userid").value;
   var password=document.getElementById("password").value;
 alert(hospid+","+userid+","+password);
-  $.getJSON("http://www.painstet.bqproject.com/login.php?jsoncallback=?&hospid="+hospid+"&userid="+userid+"&password="+password, function(data){   
+$.getJSON("http://www.painstet.bqproject.com/login.php?jsoncallback=?&hospid="+hospid+"&userid="+userid+"&password="+password, function(data){   
+
 alert("insidejson");
 if(data['err']==1)
 {
